@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#073b3a"><title>Colón Turismo</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header><a class="brand" href="#"><span class="logo">CT</span><span><b>Colón</b><small>TURISMO</small></span></a>
+<nav><a href="#inicio">Inicio</a><a href="#lugares">Lugares</a><a href="#mapa">Mapa</a></nav>
+<button id="locate">⌖ Mi ubicación</button></header>
+<main>
+<section class="hero" id="inicio"><div class="hero-inner"><p class="eyebrow">DESCUBRE COLÓN, PANAMÁ</p><h1>Tu próxima historia<br>comienza <em>aquí.</em></h1><p>Explora sitios históricos, cultura y rincones de la costa caribeña.</p><a class="cta" href="#lugares">Explorar lugares ↗</a></div></section>
+<section class="intro"><div><p class="eyebrow dark">UNA PROVINCIA POR DESCUBRIR</p><h2>Colón tiene mucho<br>que contar.</h2></div><p>Encuentra lugares de interés y consulta sus ubicaciones. Este MVP es un prototipo; confirma datos, acceso y horarios antes de visitar.</p></section>
+<section id="lugares" class="places"><div class="section-head"><div><p class="eyebrow dark">ARMA TU RECORRIDO</p><h2>Lugares destacados</h2></div><input id="search" type="search" placeholder="Buscar un lugar..." aria-label="Buscar un lugar"></div>
+<div class="filters"><button class="active" data-filter="Todos">Todos</button><button data-filter="Historia">Historia</button><button data-filter="Naturaleza">Naturaleza</button><button data-filter="Cultura">Cultura</button></div>
+<div id="cards" class="cards"></div><p id="empty" hidden>No encontramos lugares con esa búsqueda.</p></section>
+<section id="mapa" class="map-section"><div class="map-head"><div><p class="eyebrow">UBICA TU PRÓXIMA PARADA</p><h2>Explora el mapa</h2><p>Selecciona un marcador o usa tu ubicación si lo deseas.</p></div><button id="locate2" class="light">⌖ Usar mi ubicación</button></div><div id="map"></div><p id="status" role="status">La ubicación solo se consulta al presionar el botón y conceder permiso.</p></section>
+<section class="ar"><div class="ar-logo">AR</div><div><p class="eyebrow dark">PRÓXIMAMENTE</p><h2>La historia, frente a ti.</h2><p>La realidad aumentada está prevista para una siguiente etapa. Esta versión todavía no activa cámara ni capas AR.</p></div><button id="arInfo">Conocer el modo AR ↗</button></section>
+</main>
+<footer><a class="brand" href="#"><span class="logo">CT</span><span><b>Colón</b><small>TURISMO</small></span></a><p>Una guía en construcción para descubrir Colón, Panamá.</p><small>MVP · v0.1</small></footer>
+<dialog id="detail"><button id="close" class="close" aria-label="Cerrar">×</button><div class="detail-top"></div><div class="detail-body"><p id="category" class="eyebrow dark"></p><h2 id="title"></h2><p id="description"></p><p id="notice" class="notice"></p><div class="actions"><button id="showMap">Ver en el mapa</button><a id="directions" target="_blank" rel="noreferrer">Cómo llegar ↗</a></div></div></dialog>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="/app.js"></script>
+</body></html>
