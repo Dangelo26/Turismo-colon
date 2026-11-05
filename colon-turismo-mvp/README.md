@@ -42,3 +42,6 @@ servidor usa módulos integrados de Node.js.
 3.  Probar en móviles reales.
 4.  Decidir si se necesita PWA, API o panel administrativo.
 5.  Evaluar AR en los dispositivos objetivo.
+
+
+### Actualización de prueba realizada desde Windows.
