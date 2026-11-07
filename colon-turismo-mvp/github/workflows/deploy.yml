@@ -1,0 +1,22 @@
+name: Deploy Turismo-Colon
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Actualizar aplicación
+        run: |
+          cd /home/turismocolon/Turismo-colon
+          git pull origin main
+          npm install
+          pm2 restart turismo-colon
+
+      - name: Verificar servidor
+        run: |
+          curl -f http://localhost:3000
